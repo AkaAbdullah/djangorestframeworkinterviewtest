@@ -17,49 +17,52 @@
             </div>
         </div>
     </div>
-    <div class="columns">
-        <div class="column is-half is-offset-one-quarter">
-            <div class="box has-background-danger-light">
-                <p class="has-text-centered has-text-weight-bold is-size-4">Interviews List</p>
-                {% if interviews %}
-                {% for items in interviews %}
-                <hr>
-                <h1> {{items.id}} : Interview with <strong> {{items.name}} </strong> at <strong>{{items.date}}</strong>
-                </h1>
-                {% endfor %}
-                {% else %}
-                <p>No Record Found</p>
-                {% endif %}
+    <div class="container">
+        <div class="columns">
+            <div class="column is-6 ">
+                <div class="box has-background-danger-light">
+                    <p class="has-text-centered has-text-weight-bold is-size-4">Interviews List</p>
+                    {% if interviews %}
+                    {% for items in interviews %}
+                    <hr>
+                    <h1> {{items.id}} : Interview with <strong> {{items.name}} </strong> at
+                        <strong>{{items.date}}</strong>
+                    </h1>
+                    {% endfor %}
+                    {% else %}
+                    <p>No Record Found</p>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="column is-6">
+                <div class="box has-background-danger-light">
+                    <p class="has-text-centered has-text-weight-bold is-size-4">API Links</p>
+                    <hr>
+                    <a class="button is-link is-fullwidth" href="http://127.0.0.1:8000/api/interviewList">Protected API
+                        Link</a>
+                    <hr>
+                    <a class=" button is-link is-fullwidth"
+                        href="http://127.0.0.1:8000/public/api/interviewList/">Public
+                        API Link</a>
+                    <hr>
+
+                    <p class="has-text-centered is-size-5 has-text-weight-bold">Logins</p>
+                    <hr>
+                    <p class="is-size-5 has-text-centered has-text-weight-bold">Superuser Login Details</p>
+                    <p class="has-text-centered">Can perform All actions Create Read Update and Delete</p>
+                    <p><strong>username</strong> : admin</p>
+                    <p><strong>password</strong> : admin</p>
+                    <p class="is-size-5 has-text-centered has-text-weight-bold">Normal User Login Details</p>
+                    <p class="has-text-centered">Can only Read </p>
+
+                    <p><strong>username</strong> : normaluser</p>
+                    <p><strong>password</strong> : esemble3gs</p>
+                </div>
             </div>
         </div>
     </div>
-    <div class="columns">
-        <div class="column is-half is-offset-one-quarter">
-            <div class="box has-background-warning">
-                <p class="has-text-centered has-text-weight-bold is-size-4">API Links</p>
-                <hr>
-                <a class="button is-link is-fullwidth" href="http://127.0.0.1:8000/api/interviewList">Protected API
-                    Link</a>
-                <hr>
-                <a class=" button is-link is-fullwidth" href="http://127.0.0.1:8000/public/api/interviewList/">Public
-                    API Link</a>
-                <hr>
 
-                <p class="has-text-centered is-size-5 has-text-weight-bold">Logins</p>
-                <hr>
-                <p class="is-size-5 has-text-centered has-text-weight-bold">Superuser Login Details</p>
-                <p class="has-text-centered">Can perform All actions Create Read Update and Delete</p>
-                <p><strong>username</strong> : admin</p>
-                <p><strong>password</strong> : admin</p>
-                <p class="is-size-5 has-text-centered has-text-weight-bold">Normal User Login Details</p>
-                <p class="has-text-centered">Can only Read </p>
-
-                <p><strong>username</strong> : normaluser</p>
-                <p><strong>password</strong> : esemble3gs</p>
-            </div>
-        </div>
-    </div>
-    <footer class="footer has-background-danger-light">
+    <footer class="footer has-background-danger-light mt-5">
         <div class="content has-text-centered">
             <p>
                 Made with <strong>Bulma CSS FrameWork</strong>
